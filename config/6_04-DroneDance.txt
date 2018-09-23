@@ -1,0 +1,51 @@
+# Hover at the initial point using full 3D control
+
+INCLUDE QuadPhysicalParams.txt
+
+# simulation setup
+Sim.RunMode = Repeat
+Sim.EndTime = 10
+Sim.Vehicle1 = Quad1
+Sim.Vehicle2 = Quad2
+Sim.Vehicle3 = Quad3
+Sim.Vehicle4 = Quad4
+
+# Controller selection
+Quad.ControlType = QuadControl
+Quad.ControlConfig = QuadControlParams
+
+# reference trajectory (just the starting position)
+QuadControlParams.Trajectory=traj/FigureEight.txt
+
+# graphing commands
+Commands.1=Toggle.RefTrajectory
+Commands.2=Toggle.ActualTrajectory
+
+INCLUDE QuadControlParams.txt
+INCLUDE Simulation.txt
+
+# Vehicle-specific config
+[Quad1:Quad]
+InitialPos=0.0,0.0,0.0
+ControlConfig = QuadControlParams00
+
+[Quad2:Quad]
+InitialPos=0.0,0.0,0.0
+ControlConfig=QuadControlParams01
+
+[Quad3:Quad]
+InitialPos=0.0,0.0,0.0
+ControlConfig = QuadControlParams02
+
+[Quad4:Quad]
+InitialPos=0.0,0.0,0.0
+ControlConfig = QuadControlParams03
+
+[QuadControlParams00:QuadControlParams]
+Trajectory=traj/DroneDance0400.txt
+[QuadControlParams01:QuadControlParams]
+Trajectory=traj/DroneDance0401.txt
+[QuadControlParams02:QuadControlParams]
+Trajectory=traj/DroneDance0402.txt
+[QuadControlParams03:QuadControlParams]
+Trajectory=traj/DroneDance0403.txt

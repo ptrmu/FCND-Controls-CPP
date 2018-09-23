@@ -1,0 +1,135 @@
+# Hover at the initial point using full 3D control
+
+INCLUDE QuadPhysicalParams.txt
+
+# simulation setup
+Sim.RunMode = Repeat
+Sim.EndTime = 12
+Sim.Vehicle1 = Quad1
+Sim.Vehicle2 = Quad2
+Sim.Vehicle3 = Quad3
+Sim.Vehicle4 = Quad4
+Sim.Vehicle5 = Quad5
+Sim.Vehicle6 = Quad6
+Sim.Vehicle7 = Quad7
+Sim.Vehicle8 = Quad8
+Sim.Vehicle9 = Quad9
+Sim.Vehicle10 = Quad10
+Sim.Vehicle11 = Quad11
+Sim.Vehicle12 = Quad12
+Sim.Vehicle13 = Quad13
+Sim.Vehicle14 = Quad14
+Sim.Vehicle15 = Quad15
+Sim.Vehicle16 = Quad16
+
+# Controller selection
+Quad.ControlType = QuadControl
+Quad.ControlConfig = QuadControlParams
+
+# reference trajectory (just the starting position)
+QuadControlParams.Trajectory=traj/FigureEight.txt
+
+# graphing commands
+Commands.1=Toggle.RefTrajectory
+Commands.2=Toggle.ActualTrajectory
+
+INCLUDE QuadControlParams.txt
+INCLUDE Simulation.txt
+
+# Vehicle-specific config
+[Quad1:Quad]
+InitialPos=0.0,0.0,0.0
+ControlConfig = QuadControlParams00
+
+[Quad2:Quad]
+InitialPos=0.0,0.0,0.0
+ControlConfig = QuadControlParams01
+
+[Quad3:Quad]
+InitialPos=0.0,0.0,0.0
+ControlConfig = QuadControlParams02
+
+[Quad4:Quad]
+InitialPos=0.0,0.0,0.0
+ControlConfig = QuadControlParams03
+
+[Quad5:Quad]
+InitialPos=0.0,0.0,0.0
+ControlConfig = QuadControlParams04
+
+[Quad6:Quad]
+InitialPos=0.0,0.0,0.0
+ControlConfig = QuadControlParams05
+
+[Quad7:Quad]
+InitialPos=0.0,0.0,0.0
+ControlConfig = QuadControlParams06
+
+[Quad8:Quad]
+InitialPos=0.0,0.0,0.0
+ControlConfig = QuadControlParams07
+
+[Quad9:Quad]
+InitialPos=0.0,0.0,0.0
+ControlConfig = QuadControlParams08
+
+[Quad10:Quad]
+InitialPos=0.0,0.0,0.0
+ControlConfig = QuadControlParams09
+
+[Quad11:Quad]
+InitialPos=0.0,0.0,0.0
+ControlConfig = QuadControlParams10
+
+[Quad12:Quad]
+InitialPos=0.0,0.0,0.0
+ControlConfig = QuadControlParams11
+
+[Quad13:Quad]
+InitialPos=0.0,0.0,0.0
+ControlConfig = QuadControlParams12
+
+[Quad14:Quad]
+InitialPos=0.0,0.0,0.0
+ControlConfig = QuadControlParams13
+
+[Quad15:Quad]
+InitialPos=0.0,0.0,0.0
+ControlConfig = QuadControlParams14
+
+[Quad16:Quad]
+InitialPos=0.0,0.0,0.0
+ControlConfig = QuadControlParams15
+
+[QuadControlParams00:QuadControlParams]
+Trajectory=traj/DroneDance1600.txt
+[QuadControlParams01:QuadControlParams]
+Trajectory=traj/DroneDance1601.txt
+[QuadControlParams02:QuadControlParams]
+Trajectory=traj/DroneDance1602.txt
+[QuadControlParams03:QuadControlParams]
+Trajectory=traj/DroneDance1603.txt
+[QuadControlParams04:QuadControlParams]
+Trajectory=traj/DroneDance1604.txt
+[QuadControlParams05:QuadControlParams]
+Trajectory=traj/DroneDance1605.txt
+[QuadControlParams06:QuadControlParams]
+Trajectory=traj/DroneDance1606.txt
+[QuadControlParams07:QuadControlParams]
+Trajectory=traj/DroneDance1607.txt
+[QuadControlParams08:QuadControlParams]
+Trajectory=traj/DroneDance1608.txt
+[QuadControlParams09:QuadControlParams]
+Trajectory=traj/DroneDance1609.txt
+[QuadControlParams10:QuadControlParams]
+Trajectory=traj/DroneDance1610.txt
+[QuadControlParams11:QuadControlParams]
+Trajectory=traj/DroneDance1611.txt
+[QuadControlParams12:QuadControlParams]
+Trajectory=traj/DroneDance1612.txt
+[QuadControlParams13:QuadControlParams]
+Trajectory=traj/DroneDance1613.txt
+[QuadControlParams14:QuadControlParams]
+Trajectory=traj/DroneDance1614.txt
+[QuadControlParams15:QuadControlParams]
+Trajectory=traj/DroneDance1615.txt

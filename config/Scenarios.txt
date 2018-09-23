@@ -3,3 +3,5 @@
 3_PositionControl
 4_Nonidealities
 5_TrajectoryFollow
+6_04-DroneDance
+7_16-DroneDance
